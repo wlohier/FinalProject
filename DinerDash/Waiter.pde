@@ -16,7 +16,7 @@ class Waiter{
   }
   
   void display(){
-    background(0, 55, 55);
+    background(255);
     fill(255, 0, 0);
     ellipse(xcor, ycor, 25, 25);
   }
