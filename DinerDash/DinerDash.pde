@@ -11,10 +11,10 @@ void setup(){
   rect(0, 0, 600, 100);
   MrJ = new Waiter(3);
   tables = new Table[4];
-  tables[0] = new Table(0, 200, 200);
-  tables[1] = new Table(0, 200, 300);
-  tables[2] = new Table(0, 400, 200);
-  tables[3] = new Table(0, 400, 300);
+  tables[0] = new Table(0, 200, 200, 236, 195);
+  tables[1] = new Table(1, 200, 300, 236, 295);
+  tables[2] = new Table(2, 400, 200, 436, 195);
+  tables[3] = new Table(3, 400, 300, 436, 295);
 }
 
 void draw(){

@@ -25,7 +25,7 @@ class Waiter{
     targX = x;
     targY = y;
     moveToTarg = true;
-    if(Math.abs(ycor - y) > 20){
+    if(abs(ycor - y) > 5){
       if(ycor > y){
         ycor -= speed;
       }
@@ -33,7 +33,7 @@ class Waiter{
         ycor += speed;
       }
     }
-    if(abs(xcor - x) > 20 && abs(ycor - y)<=20){
+    if(abs(xcor - x) > 5 && abs(ycor - y)<=5){
       if(xcor > x){
         xcor -= speed;
       }
