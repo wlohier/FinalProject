@@ -23,7 +23,7 @@ void setup(){
   Food g = new Food(1, 330, 25);
   food.add(f);
   food.add(g);
-  customers = new ArrayList()
+  customers = new ArrayList();
   
 }
 
