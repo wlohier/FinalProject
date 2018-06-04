@@ -10,7 +10,7 @@ class Dumpster implements Clickable{
     Dwidth = 70;
     Ddepth = 40;
     moveHereX = 85;
-    moveHereY = 120;
+    moveHereY = 117;
   }
   
   void display(){
@@ -23,6 +23,19 @@ class Dumpster implements Clickable{
     if(pmouseX > xcor && pmouseX < xcor + Dwidth &&
       pmouseY > ycor && pmouseY < ycor + Ddepth){
         w.moveTo(moveHereX, moveHereY);  
+    }
+    if(abs(w.xcor - moveHereX) < 10 &&
+       abs(w.ycor - moveHereY) < 10){
+      waiterHere = true;
+      int foodLoop = 0;
+      while(foodLoop < food.size()){
+           if(food.get(foodLoop).held){
+             food.remove(food.get(foodLoop));
+           }
+           else{
+             foodLoop++;
+           }
+      }
     }
   }
 }

@@ -26,7 +26,7 @@ class Counter implements Clickable{
              food.get(i).held = true;
              food.get(i).onCounter = false;
            }
-         }
+         }       
        } 
   }
 }
