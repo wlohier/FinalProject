@@ -1,6 +1,6 @@
 Waiter MrJ;
 Counter count;
-//Dumpster Dump;
+Dumpster dump;
 Table[] tables;
 ArrayList<Customer> customers;
 ArrayList<Food> food;
@@ -24,12 +24,14 @@ void setup(){
   food.add(f);
   food.add(g);
   customers = new ArrayList();
+  dump = new Dumpster();
   
 }
 
 void draw(){
   MrJ.display();
   count.display();
+  dump.display();
   for(int i = 0; i < 4; i++){
     tables[i].display();
   }
@@ -50,8 +52,10 @@ void mouseClicked(){
     customers.get(i).clicked(MrJ);
   }
   for(int i = 0; i < 4; i++){
-    for(int j = 0; j < customers.size(); j++){
-      tables[i].clicked(customers.get(j));
+    if(peopleHeld){
+      for(int j = 0; j < customers.size(); j++){
+        tables[i].clicked(customers.get(j));
+      }
     }
     if(!peopleHeld){
       tables[i].clicked(MrJ);
@@ -60,4 +64,5 @@ void mouseClicked(){
   if(!peopleHeld){
     count.clicked(MrJ);
   }
+  dump.clicked(MrJ);
 }
