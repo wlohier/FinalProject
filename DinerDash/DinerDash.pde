@@ -19,7 +19,10 @@ void setup(){
   tables[3] = new Table(3, 400, 300, 436, 295);
   food = new ArrayList();
   Food f = new Food(0, 300, 25);
+  Food g = new Food(1, 330, 25);
   food.add(f);
+  food.add(g);
+  
 }
 
 void draw(){

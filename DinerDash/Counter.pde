@@ -18,10 +18,15 @@ class Counter implements Clickable{
     if(pmouseY < 50){
       w.moveTo(moveHereX, moveHereY);
     }
-    if(abs(w.xcor - moveHereX) < 7 &&
-       abs(w.ycor - moveHereY) < 7){
+    if(abs(w.xcor - moveHereX) < 10 &&
+       abs(w.ycor - moveHereY) < 10){
          waiterHere = true;
-         food.get(0).held = true;
+         for(int i = 0; i < food.size(); i++){
+           if(food.get(i).onCounter){
+             food.get(i).held = true;
+             food.get(i).onCounter = false;
+           }
+         }
        } 
   }
 }

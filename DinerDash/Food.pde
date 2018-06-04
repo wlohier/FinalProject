@@ -4,6 +4,10 @@ class Food{
   int ycor;
   boolean eaten = false;
   boolean held;
+  boolean onCounter = true;
+  boolean onTable = false;
+  
+  
   Food(int t, int x, int y){
     table = t;
     xcor = x;
