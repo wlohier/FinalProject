@@ -41,9 +41,14 @@ class Table implements Clickable{
               foodHere = true;
               food.get(i).ycor += 30;
             }
-            waiterHere = true;
+            else if(foodHere && food.get(i).table == num){
+              food.get(i).held = true;
+              food.get(i).onTable = false;
+              foodHere = false;
+            }
           }
      }
+   
   }
   
   void clicked(Customer c){
