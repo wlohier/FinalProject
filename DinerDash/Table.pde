@@ -38,6 +38,7 @@ class Table implements Clickable{
               food.get(i).onTable = true;
               food.get(i).held = false;
               foodHere = true;
+              food.get(i).ycor += 30;
             }
             waiterHere = true;
           }
