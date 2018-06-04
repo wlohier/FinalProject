@@ -10,15 +10,16 @@ class Food{
     ycor = y;
   }
   
-  void followWaiter(Waiter w, Counter c){
+  void followWaiter(Waiter w){
     if(held){
       xcor = w.xcor - 7;
       ycor = w.ycor - 5;
     }
   }
   
-  void display(){
+  void display(Waiter w){
     fill(0, 255, 0);
     ellipse(xcor, ycor, 8, 8);
+    followWaiter(w);
   }
 }
