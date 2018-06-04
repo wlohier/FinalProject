@@ -6,7 +6,8 @@ class Table implements Clickable{
   int moveHereX;
   int moveHereY;
   boolean waiterHere;
-  boolean foodHere;
+  boolean customerHere = false;
+  boolean foodHere = false;
   
   Table(int n, int x, int y, int mx, int my){
     num = n;
@@ -34,7 +35,7 @@ class Table implements Clickable{
        abs(w.ycor - moveHereY) < 7){
          waiterHere = true;
          for(int i = 0; i < food.size(); i++){
-            if(food.get(i).held && food.get(i).table == num){
+            if(food.get(i).held && food.get(i).table == num && !foodHere){
               food.get(i).onTable = true;
               food.get(i).held = false;
               foodHere = true;
@@ -43,5 +44,15 @@ class Table implements Clickable{
             waiterHere = true;
           }
      }
+  }
+  
+  void clicked(Customer c){
+    if(pmouseX > Txcor && pmouseX < Txcor + Twidth
+        && pmouseY > Tycor && pmouseY < Tycor + Tdepth){
+      c.carried = false;
+      customerHere = true;
+      c.ordering = true;
+      peopleHeld = false;
+    }
   }
 }
