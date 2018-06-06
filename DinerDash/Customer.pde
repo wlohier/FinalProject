@@ -2,6 +2,7 @@ class Customer implements Clickable{
   int xcor;
   int ycor;
   int patience = 1500;
+  float tip = 20;
   boolean inLine = true;
   boolean ordering = false;
   boolean ordered = false;
@@ -21,7 +22,7 @@ class Customer implements Clickable{
       xcor = mouseX;
       ycor = mouseY;
     }
-    rect(xcor, ycor, 50, 50);
+    rect(xcor, ycor, 15, 15);
   }
   
   void clicked(Waiter w){

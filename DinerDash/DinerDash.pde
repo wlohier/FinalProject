@@ -37,7 +37,7 @@ void draw(){
   dump.display();
   if(timer%600 == 0){
     food.add(new Food((int)random(4), 300+food.size()*25, 25));
-    customers.add(new Customer((
+    customers.add(new Customer(50, 350 - 50*customers.size()));
   }
   for(int i = 0; i < 4; i++){
     tables[i].display();
