@@ -9,6 +9,11 @@ class Customer implements Clickable{
   boolean carried;
   
   
+  Customer(int x, int y){
+    xcor = x;
+    ycor = y;
+    carried = false;
+  }
   
   void display(){
     fill(255-(255/patience), 255/patience, 0);
