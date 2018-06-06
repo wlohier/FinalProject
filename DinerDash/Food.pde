@@ -23,9 +23,16 @@ class Food{
   }
   
   void display(Waiter w){
-    if
+    if(!eaten && tables[table].customerHere){
+      eatTime--;
+      if(eatTime < 0){
+        eaten = true;
+      }
+    }
     fill(240-eatTime, 255-(240-eatTime), 0);
     ellipse(xcor, ycor, 8, 8);
+    fill(0, 0, 255);
+    text(table, xcor, ycor);
     followWaiter(w);
   }
 }

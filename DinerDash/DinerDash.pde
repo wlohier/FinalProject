@@ -59,13 +59,13 @@ void mouseClicked(){
     customers.get(i).clicked(MrJ);
   }
   for(int i = 0; i < 4; i++){
+    if(!peopleHeld){
+      tables[i].clicked(MrJ);
+    }
     if(peopleHeld){
       for(int j = 0; j < customers.size(); j++){
         tables[i].clicked(customers.get(j));
       }
-    }
-    if(!peopleHeld){
-      tables[i].clicked(MrJ);
     }
   }
   if(!peopleHeld){
