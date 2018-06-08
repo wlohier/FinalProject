@@ -58,6 +58,8 @@ class Table implements Clickable{
       customerHere = true;
       c.ordering = true;
       peopleHeld = false;
+      c.xcor = Txcor + 10;
+      c.ycor = Tycor - 10;
     }
   }
 }
