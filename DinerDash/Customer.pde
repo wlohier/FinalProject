@@ -7,6 +7,7 @@ class Customer implements Clickable{
   boolean ordering = false;
   boolean ordered = false;
   boolean eating = false;
+  boolean eaten = false;
   boolean carried;
   
   
@@ -39,10 +40,12 @@ class Customer implements Clickable{
   }
   
   void patienceChange(){
+    if(inLine || ordered || eaten){
     patience--;
     if(patience < 0){
       customers.remove(this);
       money -= 5;
+    }
     }
   }
 }

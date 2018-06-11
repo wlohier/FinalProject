@@ -21,6 +21,8 @@ class Counter implements Clickable{
         cooking = false;
         Food f = new Food(cookTable, 300 + food.size()*10, 25);
         food.add(f);
+        cooking = false;
+        cooktime = 0;
       }
     }
   }

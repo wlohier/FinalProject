@@ -28,6 +28,11 @@ class Food{
       eatTime--;
       if(eatTime < 0){
         eaten = true;
+        for(int i = 0; i < customers.size(); i++){
+          if(customers.get(i).tableNum == table){
+            customers.get(i).eaten = true;
+          }
+        }
       }
     }
     fill(240-eatTime, 255-(240-eatTime), 0);
