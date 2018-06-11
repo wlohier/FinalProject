@@ -16,7 +16,7 @@ class Dumpster implements Clickable{
   void display(){
     fill(0);
     rect(xcor, ycor, Dwidth, Ddepth);
-    image(dumpster, xcor, ycor, Dwidth, Ddepth);
+    image(dumpster, xcor - 20, ycor - 35, Dwidth + 45, Ddepth + 45);
     
   }
   
