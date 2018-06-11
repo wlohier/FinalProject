@@ -45,13 +45,16 @@ class Customer implements Clickable{
     if(ordering){
       text("Ready to Order", xcor - 40, ycor - 5);
     }
+    else if(eating){
+      text("Yum!!", xcor - 20, ycor - 5);
+    }
     else if(ordered){
       text("Ordered", xcor - 20, ycor - 5);
     }
   }
   
   void patienceChange(){
-    if(inLine || ordered || eaten){
+    if(inLine || ordered || eaten || ordering){
     patience--;
     if(patience < 0){
       int foodRem = -1;

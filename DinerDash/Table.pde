@@ -46,6 +46,7 @@ class Table implements Clickable{
               for(int j = 0; j < customers.size(); j++){
                 if(customers.get(j).tableNum==num){
                   customers.get(j).patience += 400;
+                  customers.get(j).eating = true;
                 }
               }
             }
@@ -57,7 +58,7 @@ class Table implements Clickable{
               for(int j = 0; j < customers.size(); j++){
                 if(customers.get(j).tableNum==num){
                   removable = j;
-                  money += customers.get(j).patience/100;
+                  money += customers.get(j).patience/200;
                 }
               }
               if(removable > -1){

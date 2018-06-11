@@ -2,7 +2,7 @@ class Food{
   int table;
   int xcor;
   int ycor;
-  int eatTime = 240;
+  int eatTime = 300;
   boolean eaten = false;
   boolean held;
   boolean onCounter = true;
@@ -35,7 +35,7 @@ class Food{
         }
       }
     }
-    fill(240-eatTime, 255-(240-eatTime), 0);
+    fill(300-eatTime, 300-(300-eatTime), 0);
     ellipse(xcor, ycor, 8, 8);
     fill(255, 0, 0);
     if(!eaten){
