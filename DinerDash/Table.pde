@@ -67,13 +67,25 @@ class Table implements Clickable{
               }
             }
           }
-        if(customerHere && !foodHere && ordering){
+        if(customerHere && !foodHere && ordering && w.hasOrder < 0){
           w.hasOrder = num;
           ordering = false;
           for(int j = 0; j < customers.size(); j++){
             if(customers.get(j).tableNum==num){
               customers.get(j).patience += 400;
+              customers.get(j).ordering = false;
               customers.get(j).ordered = true;
+            }
+          }
+        }
+        if(customerHere && !foodHere && ordering && w.hasOrder > 0 && w.secondOrder < 0){
+          w.secondOrder = num;
+          ordering = false;
+          for(int k = 0; k < customers.size(); k++){
+            if(customers.get(k).tableNum==num){
+              customers.get(k).patience += 400;
+              customers.get(k).ordering = false;
+              customers.get(k).ordered = true;
             }
           }
         }

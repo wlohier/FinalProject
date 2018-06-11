@@ -5,7 +5,7 @@ class Counter implements Clickable{
   boolean cooking = false;
   int cooktime = 0;
   int cookTable = -1;
-  int cookTable2 = -1
+  int cookTable2 = -1;
   
   Counter(){
     moveHereX = 300;
@@ -23,8 +23,8 @@ class Counter implements Clickable{
         Food f = new Food(cookTable, 300 + food.size()*10, 25);
         food.add(f);
         if(cookTable2 > -1){
-          Food f = new Food(cookTable2, 300 + food.size()*10, 25);
-          food.add(f);
+          Food f2 = new Food(cookTable2, 300 + food.size()*10, 25);
+          food.add(f2);
         }
         cooking = false;
         cooktime = 0;

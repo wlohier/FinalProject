@@ -4,7 +4,7 @@ class Waiter{
   float speed;
   boolean moveToTarg;
   int hasOrder = -1;
-  int secondOrder = -1
+  int secondOrder = -1;
   float targX;
   float targY;
   

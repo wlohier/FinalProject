@@ -25,6 +25,7 @@ class Customer implements Clickable{
     }
     rect(xcor, ycor, 15, 15);
     patienceChange();
+    showStatus();
   }
   
   void clicked(Waiter w){
@@ -36,6 +37,16 @@ class Customer implements Clickable{
         customerQueue.remove(this);
         patience+=500;
       }
+    }
+  }
+  
+  void showStatus(){
+    fill(10, 200, 20);
+    if(ordering){
+      text("Ready to Order", xcor - 40, ycor - 5);
+    }
+    else if(ordered){
+      text("Ordered", xcor - 20, ycor - 5);
     }
   }
   
