@@ -2,7 +2,7 @@ class Food{
   int table;
   int xcor;
   int ycor;
-  int eatTime = 360;
+  int eatTime = 240;
   boolean eaten = false;
   boolean held;
   boolean onCounter = true;

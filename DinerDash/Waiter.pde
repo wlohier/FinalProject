@@ -4,6 +4,7 @@ class Waiter{
   float speed;
   boolean moveToTarg;
   int hasOrder = -1;
+  int secondOrder = -1
   float targX;
   float targY;
   
@@ -24,7 +25,12 @@ class Waiter{
       fill(50, 50, 50);
       rect(xcor, ycor, 5, 5);
     }
+    if(secondOrder > -1){
+      fill(50, 50, 50);
+      rect(xcor + 7, ycor, 5, 5);
+    }
   }
+  
   
   void moveTo(float x, float y){
     targX = x;
