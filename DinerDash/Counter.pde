@@ -18,6 +18,8 @@ class Counter implements Clickable{
     rect(0, 0, 600, 50);
     if(cooking){
       cooktime++;
+      fill(255, 0, 50);
+      text("cooking up a storm!", 50, 25);
       if(cooktime == 180){
         cooking = false;
         Food f = new Food(cookTable, 300 + food.size()*10, 25);
