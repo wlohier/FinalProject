@@ -34,7 +34,7 @@ void draw(){
   MrJ.display();
   count.display();
   dump.display();
-  if(timer%900 == 0){
+  if(timer%900 == 0 || timer == 300){
     Customer c = new Customer(50, 350 - 50*customerQueue.size());
     customers.add(c);
     customerQueue.add(c);
