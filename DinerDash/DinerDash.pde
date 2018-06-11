@@ -9,11 +9,13 @@ ArrayList<Customer> customers;
 ArrayList<Customer> customerQueue;
 ArrayList<Food> food;
 boolean peopleHeld = false;
+boolean paused = false;
 PImage brian;
 PImage jermy1;
 PImage jermy2;
 PImage jermy3;
 PImage dumpster;
+PauseScreen p;
 
 void setup(){
   background(255);
@@ -37,10 +39,13 @@ void setup(){
   jermy2 = loadImage("jermy2.png");
   jermy3 = loadImage("jermy3.png");
   dumpster = loadImage("dumpster.png");
+  p = new PauseScreen();
 }
 
 void draw(){
+  if(!paused){
   timer++;
+  }
   MrJ.display();
   count.display();
   dump.display();
@@ -60,7 +65,11 @@ void draw(){
   }
   MrJ.moveTo(MrJ.targX, MrJ.targY);
   fill(0);
-  text("$ " + money, 500, 390);
+  text("$ " + money, 500, 385);
+  rect(530, 370, 50, 18);
+  fill(255);
+  text("pause", 538, 383);
+  p.display();
 }
 
 void mouseClicked(){
@@ -81,4 +90,5 @@ void mouseClicked(){
     count.clicked(MrJ);
   }
   dump.clicked(MrJ);
+  p.clicked();
 }

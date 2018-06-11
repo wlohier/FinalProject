@@ -63,7 +63,7 @@ class Customer implements Clickable{
   }
   
   void patienceChange(){
-    if(inLine || ordered || eaten || ordering){
+    if((inLine || ordered || eaten || ordering) && !paused){
     patience--;
     if(patience < 0){
       int foodRem = -1;
