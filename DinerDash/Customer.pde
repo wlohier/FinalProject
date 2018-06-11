@@ -17,7 +17,7 @@ class Customer implements Clickable{
   }
   
   void display(){
-    fill(255-(255/(patience+5)), 255/(patience+5), 0);
+    fill(1500-patience, patience, 0);
     if(carried){
       xcor = mouseX;
       ycor = mouseY;
@@ -32,6 +32,7 @@ class Customer implements Clickable{
       if(inLine && !peopleHeld){
         peopleHeld = true;
         carried = true;
+        customerQueue.remove(this);
       }
     }
   }

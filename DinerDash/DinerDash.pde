@@ -6,6 +6,7 @@ int money;
 Table[] tables;
 int occupiedTables = 0;
 ArrayList<Customer> customers;
+ArrayList<Customer> customerQueue;
 ArrayList<Food> food;
 boolean peopleHeld = false;
 
@@ -24,6 +25,7 @@ void setup(){
   tables[3] = new Table(3, 400, 300, 436, 295);
   food = new ArrayList();
   customers = new ArrayList();
+  customerQueue = new ArrayList();
   dump = new Dumpster();
   
 }
@@ -33,8 +35,10 @@ void draw(){
   MrJ.display();
   count.display();
   dump.display();
-  if(timer==300){
-    customers.add(new Customer(50, 350 - 50*customers.size()));
+  if(timer%600 == 0){
+    Customer c = new Customer(50, 350 - 50*customerQueue.size());
+    customers.add(c);
+    customerQueue.add(c);
   }
   for(int i = 0; i < 4; i++){
     tables[i].display();
