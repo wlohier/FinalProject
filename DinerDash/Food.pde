@@ -2,7 +2,7 @@ class Food{
   int table;
   int xcor;
   int ycor;
-  int eatTime = 240;
+  int eatTime = 360;
   boolean eaten = false;
   boolean held;
   boolean onCounter = true;
@@ -31,8 +31,14 @@ class Food{
     }
     fill(240-eatTime, 255-(240-eatTime), 0);
     ellipse(xcor, ycor, 8, 8);
-    fill(0, 0, 255);
+    fill(255, 0, 0);
+    if(!eaten){
     text(table, xcor, ycor);
     followWaiter(w);
+    }
+    else{
+      fill(255, 0, 0);
+      text("Finished!", xcor, ycor);
+    }
   }
 }

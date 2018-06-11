@@ -43,7 +43,7 @@ class Table implements Clickable{
               foodHere = true;
               food.get(i).ycor += 30;
             }
-            else if(foodHere && food.get(i).table == num){
+            else if(foodHere && food.get(i).table == num && food.get(i).eaten){
               food.get(i).held = true;
               food.get(i).onTable = false;
               foodHere = false;

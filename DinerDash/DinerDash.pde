@@ -2,6 +2,7 @@ Waiter MrJ;
 Counter count;
 Dumpster dump;
 int timer;
+int money;
 Table[] tables;
 int occupiedTables = 0;
 ArrayList<Customer> customers;
