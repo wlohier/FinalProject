@@ -55,6 +55,8 @@ class Table implements Clickable{
                 }
               }
               customers.remove(removable);
+              occupiedTables--;
+              customerHere = false;
             }
           }
         if(customerHere && !foodHere && ordering){

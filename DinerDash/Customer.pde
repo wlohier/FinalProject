@@ -23,6 +23,7 @@ class Customer implements Clickable{
       ycor = mouseY;
     }
     rect(xcor, ycor, 15, 15);
+    
   }
   
   void clicked(Waiter w){
