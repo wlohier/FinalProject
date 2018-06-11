@@ -13,6 +13,7 @@ PImage brian;
 PImage jermy1;
 PImage jermy2;
 PImage jermy3;
+PImage dumpster;
 
 void setup(){
   background(255);
@@ -35,6 +36,7 @@ void setup(){
   jermy1 = loadImage("jermy1.png");
   jermy2 = loadImage("jermy2.png");
   jermy3 = loadImage("jermy3.png");
+  dumpster = loadImage("dumpster.png");
 }
 
 void draw(){
