@@ -52,6 +52,12 @@ class Customer implements Clickable{
       if(foodRem > -1){
         food.remove(foodRem);
       }
+      if(tableNum > -1){
+        tables[tableNum].customerHere = false;
+        tables[tableNum].foodHere = false;
+        tables[tableNum].ordering = false;
+        occupiedTables--;
+      }
       customers.remove(this);
       money -= 3;
     }
