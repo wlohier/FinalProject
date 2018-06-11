@@ -1,7 +1,7 @@
 class Customer implements Clickable{
   int xcor;
   int ycor;
-  int patience = 1500;
+  int patience = 1800;
   int tableNum = -1;
   boolean inLine = true;
   boolean ordering = false;
@@ -18,7 +18,7 @@ class Customer implements Clickable{
   }
   
   void display(){
-    fill(1500-patience, patience, 0);
+    fill(1800-patience, patience, 0);
     if(carried){
       xcor = mouseX;
       ycor = mouseY;
@@ -34,7 +34,7 @@ class Customer implements Clickable{
         peopleHeld = true;
         carried = true;
         customerQueue.remove(this);
-        patience+=300;
+        patience+=500;
       }
     }
   }

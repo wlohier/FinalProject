@@ -45,7 +45,7 @@ class Table implements Clickable{
               food.get(i).ycor += 30;
               for(int j = 0; j < customers.size(); j++){
                 if(customers.get(j).tableNum==num){
-                  customers.get(j).patience += 300;
+                  customers.get(j).patience += 400;
                 }
               }
             }
@@ -72,7 +72,7 @@ class Table implements Clickable{
           ordering = false;
           for(int j = 0; j < customers.size(); j++){
             if(customers.get(j).tableNum==num){
-              customers.get(j).patience += 300;
+              customers.get(j).patience += 400;
               customers.get(j).ordered = true;
             }
           }
