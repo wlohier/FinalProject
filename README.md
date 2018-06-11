@@ -1,10 +1,10 @@
 # BinerBash
 ### second semester Diner Dash final project by team MeMyselfAndI (William Lohier)
 
-##Basic Description
+###Basic Description
 OKUUUUUURT this is Diner Dash! it's a little bit retro but that adds to the charm :) basically your goal is to make as much shmoney in as little time as possible. You do that by running around and serving all the customers that walk into your store. There are multiple steps you need to accomplish in order to serve a customer, get paid, and clear the table. Each customer leaves a tip depending on how fast the service was. Once you earn a certain amount in tips, you win!
 
-##Instructions:
+###Instructions:
 How to run:
 run the following in a bash shell
 ~~~~~~~
@@ -12,6 +12,7 @@ $ DinerDash.pde
 ~~~~~~~
 
 How to navigate and use:
+
 	1. You start off with a new game. You can pause to see the backstory.
 	
 	2. after a few moments, the first customer will appear. click and drag that customer
