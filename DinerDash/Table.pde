@@ -42,6 +42,11 @@ class Table implements Clickable{
               food.get(i).held = false;
               foodHere = true;
               food.get(i).ycor += 30;
+              for(int j = 0; j < customers.size(); j++){
+                if(customers.get(j).tableNum==num){
+                  customers.get(j).patience += 300;
+                }
+              }
             }
             else if(foodHere && food.get(i).table == num && food.get(i).eaten){
               food.get(i).held = true;
@@ -62,6 +67,11 @@ class Table implements Clickable{
         if(customerHere && !foodHere && ordering){
           w.hasOrder = num;
           ordering = false;
+          for(int j = 0; j < customers.size(); j++){
+            if(customers.get(j).tableNum==num){
+              customers.get(j).patience += 300;
+            }
+          }
         }
      }
    

@@ -33,6 +33,7 @@ class Customer implements Clickable{
         peopleHeld = true;
         carried = true;
         customerQueue.remove(this);
+        patience+=300;
       }
     }
   }
