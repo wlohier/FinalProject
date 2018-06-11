@@ -23,10 +23,10 @@ void setup(){
   MrJ = new Waiter(3);
   count = new Counter();
   tables = new Table[4];
-  tables[0] = new Table(0, 200, 200, 236, 195);
-  tables[1] = new Table(1, 200, 300, 236, 295);
-  tables[2] = new Table(2, 400, 200, 436, 195);
-  tables[3] = new Table(3, 400, 300, 436, 295);
+  tables[0] = new Table(0, 200, 200, 236, 190);
+  tables[1] = new Table(1, 200, 300, 236, 290);
+  tables[2] = new Table(2, 400, 200, 436, 190);
+  tables[3] = new Table(3, 400, 300, 436, 290);
   food = new ArrayList();
   customers = new ArrayList();
   customerQueue = new ArrayList();
