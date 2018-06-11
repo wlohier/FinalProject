@@ -29,7 +29,7 @@ class Dumpster implements Clickable{
       waiterHere = true;
       int foodLoop = 0;
       while(foodLoop < food.size()){
-           if(food.get(foodLoop).held){
+           if(food.get(foodLoop).held && food.get(foodLoop).eaten){
              food.remove(food.get(foodLoop));
            }
            else{
