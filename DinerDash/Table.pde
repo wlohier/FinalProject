@@ -8,6 +8,7 @@ class Table implements Clickable{
   boolean waiterHere;
   boolean customerHere = false;
   boolean foodHere = false;
+  boolean ordering = false;
   
   Table(int n, int x, int y, int mx, int my){
     num = n;
@@ -47,8 +48,9 @@ class Table implements Clickable{
               foodHere = false;
             }
           }
-        if(customerHere && !foodHere){
+        if(customerHere && !foodHere && ordering){
           w.hasOrder = num;
+          ordering = false;
         }
      }
    
@@ -59,7 +61,9 @@ class Table implements Clickable{
         && pmouseY > Tycor && pmouseY < Tycor + Tdepth && c.carried){
       c.carried = false;
       customerHere = true;
+      c.inLine = false;
       c.ordering = true;
+      ordering = true;
       peopleHeld = false;
       c.xcor = Txcor - 10;
       c.ycor = Tycor + 10;

@@ -23,7 +23,7 @@ class Food{
   }
   
   void display(Waiter w){
-    if(!eaten && tables[table].customerHere){
+    if(!eaten && tables[table].customerHere && onTable){
       eatTime--;
       if(eatTime < 0){
         eaten = true;
