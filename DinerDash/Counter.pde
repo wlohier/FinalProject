@@ -2,6 +2,9 @@ class Counter implements Clickable{
   int moveHereX;
   int moveHereY;
   boolean waiterHere;
+  boolean cooking = false;
+  int cooktime = 0;
+  int cookTable = -1;
   
   Counter(){
     moveHereX = 300;
@@ -12,6 +15,14 @@ class Counter implements Clickable{
   void display(){
     fill(0);
     rect(0, 0, 600, 50);
+    if(cooking){
+      cooktime++;
+      if(cooktime == 200){
+        cooking = false;
+        Food f = new Food(cookTable, 300 + food.size()*10, 25);
+        food.add(f);
+      }
+    }
   }
   
   void clicked(Waiter w){
@@ -21,6 +32,11 @@ class Counter implements Clickable{
     if(abs(w.xcor - moveHereX) < 10 &&
        abs(w.ycor - moveHereY) < 10){
          waiterHere = true;
+         if(w.hasOrder > -1){
+           cooking = true;
+           cookTable = w.hasOrder;
+           w.hasOrder = -1;
+         }
          for(int i = 0; i < food.size(); i++){
            if(food.get(i).onCounter){
              food.get(i).held = true;

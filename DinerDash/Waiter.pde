@@ -3,6 +3,7 @@ class Waiter{
   int ycor;
   float speed;
   boolean moveToTarg;
+  int hasOrder = -1;
   float targX;
   float targY;
   
@@ -19,6 +20,10 @@ class Waiter{
     background(255);
     fill(255, 0, 0);
     ellipse(xcor, ycor, 25, 25);
+    if(hasOrder > -1){
+      fill(50, 50, 50);
+      rect(xcor, ycor, 5, 5);
+    }
   }
   
   void moveTo(float x, float y){

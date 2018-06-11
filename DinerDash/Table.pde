@@ -47,19 +47,22 @@ class Table implements Clickable{
               foodHere = false;
             }
           }
+        if(customerHere && !foodHere){
+          w.hasOrder = num;
+        }
      }
    
   }
   
   void clicked(Customer c){
     if(pmouseX > Txcor && pmouseX < Txcor + Twidth
-        && pmouseY > Tycor && pmouseY < Tycor + Tdepth){
+        && pmouseY > Tycor && pmouseY < Tycor + Tdepth && c.carried){
       c.carried = false;
       customerHere = true;
       c.ordering = true;
       peopleHeld = false;
-      c.xcor = Txcor + 10;
-      c.ycor = Tycor - 10;
+      c.xcor = Txcor - 10;
+      c.ycor = Tycor + 10;
     }
   }
 }
