@@ -71,7 +71,7 @@ void draw(){
   MrJ.moveTo(MrJ.targX, MrJ.targY);
   fill(0);
   text("$ " + money, 500, 385);
-  if(money >= 5){
+  if(money >= 50){
     won = true;
   }
   rect(530, 345, 50, 18);
