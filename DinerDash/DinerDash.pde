@@ -54,7 +54,7 @@ void draw(){
   MrJ.display();
   count.display();
   dump.display();
-  if(timer%900 == 0 || timer == 300){
+  if(timer%800 == 0 || timer == 300){
     Customer c = new Customer(50, 350 - 50*customerQueue.size());
     customers.add(c);
     customerQueue.add(c);
@@ -71,11 +71,13 @@ void draw(){
   MrJ.moveTo(MrJ.targX, MrJ.targY);
   fill(0);
   text("$ " + money, 500, 385);
-  if(money >= 5){
+  if(money >= 50){
     won = true;
   }
+  rect(530, 345, 50, 18);
   rect(530, 370, 50, 18);
   fill(255);
+  text("+speed", 532, 358);
   text("pause", 538, 383);
   p.display();
   v.display();
@@ -99,6 +101,10 @@ void mouseClicked(){
     count.clicked(MrJ);
   }
   dump.clicked(MrJ);
+  if(pmouseX > 530 && pmouseX < 580 && pmouseY > 345 && pmouseY < 345 + 18 && money >= 7){
+    MrJ.speed+=.25;
+    money -=7;
+  }
   p.clicked();
   v.clicked();
 }
