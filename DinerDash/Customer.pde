@@ -24,6 +24,7 @@ class Customer implements Clickable{
       ycor = mouseY;
     }
     rect(xcor, ycor, 15, 15);
+    image(jermy, xcor - 4, ycor - 4, 30, 30);
     patienceChange();
     showStatus();
   }

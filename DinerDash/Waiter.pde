@@ -21,7 +21,7 @@ class Waiter{
     background(255);
     fill(255, 0, 0);
     ellipse(xcor, ycor, 25, 25);
-    image(brian, xcor - 12, ycor - 12, 30, 30);
+    image(brian, xcor - 14, ycor - 14, 40, 40);
     if(hasOrder > -1){
       fill(50, 50, 50);
       rect(xcor, ycor, 5, 5);
