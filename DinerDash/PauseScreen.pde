@@ -1,4 +1,5 @@
-class PauseScreen{
+class PauseScreen implements Screen{
+  
   void display(){
     if(paused){
       fill(0);

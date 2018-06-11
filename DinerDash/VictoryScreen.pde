@@ -1,4 +1,4 @@
-class VictoryScreen{
+class VictoryScreen implements Screen{
   void display(){
     if(won){
       fill(50, 205, 50);
