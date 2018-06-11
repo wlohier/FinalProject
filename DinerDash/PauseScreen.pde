@@ -6,7 +6,7 @@ class PauseScreen{
       fill(255);
       text("welcome to the exSTERRordinary diner!\nYou are here today to help Mr. Sterr serve all\n"+
           "of his customers in order to buy Nolan Gregory a new crib!\n"+
-          "click on the customers to move them to tables.\n" + "click on the tables to take orders and bring or remove food.\n" +
+          "Click on the customers to move them to tables.\n" + "Click on the tables to take orders and bring or remove food.\n" +
           "Click on the dumpster to dispose of food\nand on the counter to place orders before the customers get angry \n" 
           + "most importantly, have fun!!",
           105, 20);

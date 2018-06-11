@@ -10,12 +10,15 @@ ArrayList<Customer> customerQueue;
 ArrayList<Food> food;
 boolean peopleHeld = false;
 boolean paused = false;
+boolean won = false;
 PImage brian;
 PImage jermy1;
 PImage jermy2;
 PImage jermy3;
 PImage dumpster;
+PImage dabSterr;
 PauseScreen p;
+VictoryScreen v;
 
 void setup(){
   background(255);
@@ -38,12 +41,14 @@ void setup(){
   jermy1 = loadImage("jermy1.png");
   jermy2 = loadImage("jermy2.png");
   jermy3 = loadImage("jermy3.png");
+  dabSterr = loadImage("dabsterr.png");
   dumpster = loadImage("dumpster.png");
   p = new PauseScreen();
+  v = new VictoryScreen();
 }
 
 void draw(){
-  if(!paused){
+  if(!paused && !won){
   timer++;
   }
   MrJ.display();
@@ -66,10 +71,14 @@ void draw(){
   MrJ.moveTo(MrJ.targX, MrJ.targY);
   fill(0);
   text("$ " + money, 500, 385);
+  if(money >= 5){
+    won = true;
+  }
   rect(530, 370, 50, 18);
   fill(255);
   text("pause", 538, 383);
   p.display();
+  v.display();
 }
 
 void mouseClicked(){
@@ -91,6 +100,7 @@ void mouseClicked(){
   }
   dump.clicked(MrJ);
   p.clicked();
+  v.clicked();
 }
 
 void reset(){
@@ -100,9 +110,13 @@ void reset(){
   food.clear();
   peopleHeld = false;
   paused = false;
+  won = false;
   MrJ.reset();
   count.reset();
   for(int i = 0; i < 4; i++){
     tables[i].reset();
   }
+  textSize(13);
+  money = 0;
+  timer = 0;
 }
