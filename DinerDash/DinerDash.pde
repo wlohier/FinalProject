@@ -9,6 +9,7 @@ ArrayList<Customer> customers;
 ArrayList<Customer> customerQueue;
 ArrayList<Food> food;
 boolean peopleHeld = false;
+PImage brian;
 
 void setup(){
   background(255);
@@ -27,6 +28,7 @@ void setup(){
   customers = new ArrayList();
   customerQueue = new ArrayList();
   dump = new Dumpster();
+  brian = loadImage("brian-300px.png");
 }
 
 void draw(){
