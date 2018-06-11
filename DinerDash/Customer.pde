@@ -17,13 +17,13 @@ class Customer implements Clickable{
   }
   
   void display(){
-    fill(255-(255/patience), 255/patience, 0);
+    fill(255-(255/(patience+5)), 255/(patience+5), 0);
     if(carried){
       xcor = mouseX;
       ycor = mouseY;
     }
     rect(xcor, ycor, 15, 15);
-    
+    patienceChange();
   }
   
   void clicked(Waiter w){
@@ -33,6 +33,14 @@ class Customer implements Clickable{
         peopleHeld = true;
         carried = true;
       }
+    }
+  }
+  
+  void patienceChange(){
+    patience--;
+    if(patience < 0){
+      customers.remove(this);
+      money -= 5;
     }
   }
 }
