@@ -27,6 +27,7 @@ class Counter implements Clickable{
         if(cookTable2 > -1){
           Food f2 = new Food(cookTable2, 300 + food.size()*10, 25);
           food.add(f2);
+          cookTable2 = -1;
         }
         cooking = false;
         cooktime = 0;
