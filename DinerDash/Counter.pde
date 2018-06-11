@@ -60,4 +60,12 @@ class Counter implements Clickable{
          }       
        } 
   }
+  
+  void reset(){
+    waiterHere = false;
+    cooking = false;
+    cooktime = 0;
+    cookTable = -1;
+    cookTable2 = -1;
+  }
 }

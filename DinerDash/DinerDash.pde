@@ -92,3 +92,12 @@ void mouseClicked(){
   dump.clicked(MrJ);
   p.clicked();
 }
+
+void reset(){
+  occupiedTables = 0;
+  customers.clear();
+  customerQueue.clear();
+  food.clear();
+  peopleHeld = false;
+  paused = false;
+}
