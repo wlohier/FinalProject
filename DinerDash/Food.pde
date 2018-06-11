@@ -23,6 +23,7 @@ class Food{
   }
   
   void display(Waiter w){
+    followWaiter(w);
     if(!eaten && tables[table].customerHere && onTable){
       eatTime--;
       if(eatTime < 0){
@@ -34,7 +35,6 @@ class Food{
     fill(255, 0, 0);
     if(!eaten){
     text(table, xcor, ycor);
-    followWaiter(w);
     }
     else{
       fill(255, 0, 0);
