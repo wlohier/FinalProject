@@ -27,7 +27,6 @@ void setup(){
   customers = new ArrayList();
   customerQueue = new ArrayList();
   dump = new Dumpster();
-  
 }
 
 void draw(){
@@ -49,10 +48,9 @@ void draw(){
   for(int i = 0; i < customers.size(); i++){
     customers.get(i).display();
   }
-  if(!peopleHeld){
   MrJ.moveTo(MrJ.targX, MrJ.targY);
-  }
-  
+  fill(0);
+  text("$ " + money, 500, 390);
 }
 
 void mouseClicked(){
