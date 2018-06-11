@@ -109,4 +109,11 @@ class Table implements Clickable{
       occupiedTables += 1;
     }
   }
+  
+  void reset(){
+    waiterHere = false;
+    customerHere = false;
+    foodHere = false;
+    ordering = false;
+  }
 }

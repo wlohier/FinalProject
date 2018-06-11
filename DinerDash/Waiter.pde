@@ -54,4 +54,12 @@ class Waiter{
       }
     }
   }
+  
+  void reset(){
+    speed = 3;
+    xcor = 300;
+    ycor = 100;
+    hasOrder = -1;
+    secondOrder = -1;
+  }
 }

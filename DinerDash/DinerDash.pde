@@ -100,4 +100,9 @@ void reset(){
   food.clear();
   peopleHeld = false;
   paused = false;
+  MrJ.reset();
+  count.reset();
+  for(int i = 0; i < 4; i++){
+    tables[i].reset();
+  }
 }
