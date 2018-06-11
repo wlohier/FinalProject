@@ -2,7 +2,7 @@ class Customer implements Clickable{
   int xcor;
   int ycor;
   int patience = 1500;
-  float tip = 20;
+  int tableNum = -1;
   boolean inLine = true;
   boolean ordering = false;
   boolean ordered = false;

@@ -47,6 +47,14 @@ class Table implements Clickable{
               food.get(i).held = true;
               food.get(i).onTable = false;
               foodHere = false;
+              int removable = -1;
+              for(int j = 0; j < customers.size(); j++){
+                if(customers.get(j).tableNum==num){
+                  removable = j;
+                  money += customers.get(j).patience/100;
+                }
+              }
+              customers.remove(removable);
             }
           }
         if(customerHere && !foodHere && ordering){
@@ -68,6 +76,7 @@ class Table implements Clickable{
       peopleHeld = false;
       c.xcor = Txcor - 10;
       c.ycor = Tycor + 10;
+      c.tableNum = num;
       occupiedTables += 1;
     }
   }
