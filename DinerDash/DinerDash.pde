@@ -3,6 +3,7 @@ Counter count;
 Dumpster dump;
 int timer;
 Table[] tables;
+int occupiedTables = 0;
 ArrayList<Customer> customers;
 ArrayList<Food> food;
 boolean peopleHeld = false;

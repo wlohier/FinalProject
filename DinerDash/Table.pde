@@ -68,6 +68,7 @@ class Table implements Clickable{
       peopleHeld = false;
       c.xcor = Txcor - 10;
       c.ycor = Tycor + 10;
+      occupiedTables += 1;
     }
   }
 }

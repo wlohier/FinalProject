@@ -27,7 +27,7 @@ class Customer implements Clickable{
   
   void clicked(Waiter w){
     if(pmouseX > xcor && pmouseX < xcor + 50 
-      && pmouseY > ycor && pmouseY < ycor + 50){
+      && pmouseY > ycor && pmouseY < ycor + 50 && occupiedTables < 4){
       if(inLine && !peopleHeld){
         peopleHeld = true;
         carried = true;
