@@ -43,8 +43,17 @@ class Customer implements Clickable{
     if(inLine || ordered || eaten){
     patience--;
     if(patience < 0){
+      int foodRem = -1;
+      for(int i = 0; i < food.size(); i++){
+        if(food.get(i).table == tableNum){
+          foodRem = i;
+        }
+      }
+      if(foodRem > -1){
+        food.remove(foodRem);
+      }
       customers.remove(this);
-      money -= 5;
+      money -= 3;
     }
     }
   }
